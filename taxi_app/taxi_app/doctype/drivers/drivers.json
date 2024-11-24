@@ -1,0 +1,241 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "format:`{name1}-{vehicle_plate_number}-{vehicle_type}",
+ "creation": "2024-10-14 20:11:23.092443",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "driver_info_section",
+  "name1",
+  "email",
+  "driver_id_number",
+  "column_break_ouxo",
+  "mobile",
+  "password",
+  "confirm_password",
+  "vehicle_type_info_section",
+  "vehicle_type",
+  "column_break_auwc",
+  "vehicle_color",
+  "column_break_cscc",
+  "vehicle_color_rep",
+  "vehicle_data_section",
+  "vehicle_plate_number",
+  "driver_licence_number",
+  "driver_licence__expiry_date",
+  "column_break_clle",
+  "vehicle_card_date",
+  "vehicle_registration_date",
+  "vehicle_licence__expiry_date",
+  "images_section",
+  "profile_picture",
+  "column_break_mooz",
+  "car_image",
+  "section_break_etuh",
+  "status",
+  "rating",
+  "section_break_sgoh",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "driver_info_section",
+   "fieldtype": "Section Break",
+   "label": "Driver Info"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "driver_id_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Driver ID Number",
+   "options": "Vehicle Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ouxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "confirm_password",
+   "fieldtype": "Password",
+   "label": "Confirm Password",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "vehicle_type_info_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Type Info"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Link",
+   "label": "Vehicle type ",
+   "options": "Vehicle Type"
+  },
+  {
+   "fieldname": "column_break_auwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_color",
+   "fieldtype": "Link",
+   "label": "Vehicle Color",
+   "options": "Vehicle Color"
+  },
+  {
+   "fieldname": "column_break_cscc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_color.color_rep",
+   "fieldname": "vehicle_color_rep",
+   "fieldtype": "Data",
+   "label": "Vehicle Color Rep"
+  },
+  {
+   "fieldname": "vehicle_data_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Data"
+  },
+  {
+   "fieldname": "vehicle_plate_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Plate Number"
+  },
+  {
+   "fieldname": "driver_licence_number",
+   "fieldtype": "Data",
+   "label": "Driver Licence Number"
+  },
+  {
+   "fieldname": "driver_licence__expiry_date",
+   "fieldtype": "Date",
+   "label": "Driver Licence  Expiry Date"
+  },
+  {
+   "fieldname": "column_break_clle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_card_date",
+   "fieldtype": "Date",
+   "label": "Vehicle Card Date"
+  },
+  {
+   "fieldname": "vehicle_registration_date",
+   "fieldtype": "Date",
+   "label": "Vehicle Registration Date"
+  },
+  {
+   "fieldname": "vehicle_licence__expiry_date",
+   "fieldtype": "Date",
+   "label": "Vehicle Licence  Expiry Date"
+  },
+  {
+   "fieldname": "images_section",
+   "fieldtype": "Section Break",
+   "label": "Images"
+  },
+  {
+   "fieldname": "profile_picture",
+   "fieldtype": "Attach Image",
+   "label": "Profile Picture"
+  },
+  {
+   "fieldname": "column_break_mooz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "car_image",
+   "fieldtype": "Attach Image",
+   "label": "Car Image"
+  },
+  {
+   "fieldname": "section_break_etuh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Offline\nOnline\nBusy"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Float",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "section_break_sgoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Driver",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "image_field": "profile_picture",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-21 21:10:44.185097",
+ "modified_by": "Administrator",
+ "module": "Taxi App",
+ "name": "Drivers",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1",
+ "track_changes": 1,
+ "track_seen": 1
+}

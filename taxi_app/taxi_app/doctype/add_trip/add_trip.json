@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-21 22:44:22.391929",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "driver",
+  "pickup",
+  "dropoff",
+  "capacity",
+  "occupied",
+  "departure",
+  "vehicle_type",
+  "price",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Drivers"
+  },
+  {
+   "fieldname": "pickup",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pickup"
+  },
+  {
+   "fieldname": "dropoff",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dropoff"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "occupied",
+   "fieldtype": "Int",
+   "label": "Occupied"
+  },
+  {
+   "fieldname": "departure",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Departure"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle Type",
+   "options": "Vehicle Type"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-24 22:50:53.329060",
+ "modified_by": "Administrator",
+ "module": "Taxi App",
+ "name": "Add Trip",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

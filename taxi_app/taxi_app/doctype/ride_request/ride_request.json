@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-15 23:29:02.250383",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "passenger",
+  "driver",
+  "pickup",
+  "dropoff",
+  "proposed_fare",
+  "final_fare",
+  "currency",
+  "features",
+  "pickup_address",
+  "dropoff_address",
+  "status",
+  "payment_status",
+  "driver_rating",
+  "passenger_rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "passenger",
+   "fieldtype": "Link",
+   "label": "Passenger",
+   "options": "Passenger"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Drivers"
+  },
+  {
+   "fieldname": "pickup",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "PickUp Location"
+  },
+  {
+   "fieldname": "dropoff",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "DropOff Location",
+   "options": "<input type=\"text\" id=\"dropoff_search\" placeholder=\"Enter Dropoff Location\">\n\n<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XnbLLhNh_hqcWUpRC7sFB6N-w0R_RdI&libraries=places&callback=initMap\" async defer></script>"
+  },
+  {
+   "fieldname": "proposed_fare",
+   "fieldtype": "Currency",
+   "label": "Proposed Fare"
+  },
+  {
+   "fieldname": "final_fare",
+   "fieldtype": "Currency",
+   "label": "Final Fare"
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table MultiSelect",
+   "label": "Features",
+   "options": "Ride Features Item"
+  },
+  {
+   "fieldname": "pickup_address",
+   "fieldtype": "Data",
+   "label": "Pickup Location Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dropoff_address",
+   "fieldtype": "Data",
+   "label": "Dropoff Location Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Requested\nAccepted\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPaid"
+  },
+  {
+   "fieldname": "driver_rating",
+   "fieldtype": "Rating",
+   "label": "Driver Rating"
+  },
+  {
+   "fieldname": "passenger_rating",
+   "fieldtype": "Rating",
+   "label": "Passenger Rating"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-24 22:50:53.082274",
+ "modified_by": "Administrator",
+ "module": "Taxi App",
+ "name": "Ride Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
